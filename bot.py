@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='ub!')
+with open("token.data") as tokenf:
+token = tokenf.readline()
 
 @bot.event
 async def on_ready():
@@ -75,4 +77,3 @@ async def help(ctx):
 
     await ctx.send(embed=embed)
 
-bot.run('NTg1ODEwMTgwMDcyMjc1OTc2.XPe4qQ.aCIwP4_N4qOHQWTUlcX6enewNnw')
