@@ -1,7 +1,8 @@
+pip install discord
 import discord
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='$')
+bot = commands.Bot(command_prefix='ub!')
 
 @bot.event
 async def on_ready():
@@ -27,7 +28,7 @@ async def on_message(message):
   @client.event
 async def on_ready():
     print("IM Here!")
-    await client.change_presence(game=discord.Game(name="$help for commands| bot by techtimefor| Im chilling"))
+    await client.change_presence(game=discord.Game(name="$=ub!help for commands| bot by techtimefor| Im chilling"))
    
 @bot.command()
 async def add(ctx, a: int, b: int):
@@ -50,7 +51,7 @@ async def info(ctx):
     embed = discord.Embed(title="nice bot", description="Nicest bot there is ever.", color=0xeee657)
 
     # give info about you here
-    embed.add_field(name="Maker", value="<techtimefor:android:>")
+    embed.add_field(name="Maker", value="<techtimefor:android: v-1.0 beta>")
 
     # Shows the number of servers the bot is member of.
     embed.add_field(name="How much people use me", value=f"{len(bot.guilds)}")
@@ -66,12 +67,12 @@ bot.remove_command('help')
 async def help(ctx):
     embed = discord.Embed(title="Useful Bot", description="I do a lot techtimefor made me :joy: :", color=0xeee657)
 
-    embed.add_field(name="$add X Y", value="Gives the addition of **V1** and **V2**, inline=False)
-    embed.add_field(name="$multiply X Y", value="Gives the multiplication of **V1** and **V"**", inline=False)
-    embed.add_field(name="$greet", value="Gives a nice greet message", inline=False)
-    embed.add_field(name="$gif", value="Get a good gif.", inline=False)
-    embed.add_field(name="$info", value="Gives a little info about the bot", inline=False)
-    embed.add_field(name="$help", value="Gives this message", inline=False)
+    embed.add_field(name="ub!add X Y", value="Gives the addition of **V1** and **V2**, inline=False)
+    embed.add_field(name="ub!multiply X Y", value="Gives the multiplication of **V1** and **V"**", inline=False)
+    embed.add_field(name="ub!greet", value="Gives a nice greet message", inline=False)
+    embed.add_field(name="ub!gif", value="Get a good gif.", inline=False)
+    embed.add_field(name="ub!info", value="Gives a little info about the bot", inline=False)
+    embed.add_field(name="ub!help", value="Gives this message", inline=False)
 
     await ctx.send(embed=embed)
 
