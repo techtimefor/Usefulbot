@@ -44,7 +44,7 @@ async def greet(ctx):
 
 @bot.command()
 async def gif(ctx):
-    await ctx.send("https://raw.githubusercontent.com/techtimefor/Usefulbot/master/niceload.gif?token=AMH7J6A3NAHZUROQOL6FHG246647W")
+    await ctx.send("https://raw.githubusercontent.com/techtimefor/Usefulbot/master/niceload.gif?token=AMH7J6BKHQPWFIE42QFEVC2467ABY")
 
 @bot.command()
 async def info(ctx):
