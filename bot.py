@@ -23,15 +23,15 @@ async def greet(ctx):
     await ctx.send(":smiley: :wave: Hello I'm Usefull Bot techtimefor made me, :joy:!")
 
 @bot.command()
-async def cat(ctx):
-    await ctx.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
+async def gif(ctx):
+    await ctx.send("https://raw.githubusercontent.com/techtimefor/Usefulbot/master/niceload.gif?token=AMH7J6A3NAHZUROQOL6FHG246647W")
 
 @bot.command()
 async def info(ctx):
     embed = discord.Embed(title="nice bot", description="Nicest bot there is ever.", color=0xeee657)
 
     # give info about you here
-    embed.add_field(name="Author", value="<YOUR-USERNAME>")
+    embed.add_field(name="Maker", value="<techtimefor:android:>")
 
     # Shows the number of servers the bot is member of.
     embed.add_field(name="How much people use me", value=f"{len(bot.guilds)}")
@@ -47,13 +47,13 @@ bot.remove_command('help')
 async def help(ctx):
     embed = discord.Embed(title="Useful Bot", description="I do a lot techtimefor made me :joy: :", color=0xeee657)
 
-    embed.add_field(name="$add X Y", value="Gives the addition of V1 and V2, inline=False)
-    embed.add_field(name="$multiply X Y", value="Gives the multiplication of **X** and **Y**", inline=False)
+    embed.add_field(name="$add X Y", value="Gives the addition of **V1** and **V2**, inline=False)
+    embed.add_field(name="$multiply X Y", value="Gives the multiplication of **V1** and **V"**", inline=False)
     embed.add_field(name="$greet", value="Gives a nice greet message", inline=False)
-    embed.add_field(name="$cat", value="Gives a cute cat gif to lighten up the mood.", inline=False)
+    embed.add_field(name="$gif", value="Get a good gif.", inline=False)
     embed.add_field(name="$info", value="Gives a little info about the bot", inline=False)
     embed.add_field(name="$help", value="Gives this message", inline=False)
 
     await ctx.send(embed=embed)
 
-bot.run('NDE0MzIyMDQ1MzA0OTYzMDcy.DWl2qw.nTxSDf9wIcf42te4uSCMuk2VDa0')
+bot.run('NTg1ODEwMTgwMDcyMjc1OTc2.XPe4qQ.aCIwP4_N4qOHQWTUlcX6enewNnw')
