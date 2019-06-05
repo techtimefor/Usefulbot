@@ -10,6 +10,25 @@ async def on_ready():
     print(bot.user.id)
     print('------')
 
+ @client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+    if message.content == "Im feeling bad today":
+        await client.send_message(message.channel, "Dont worry cheer up! :rainbow:") 
+        
+ @client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+    if message.content == "Hello":
+        await client.send_message(message.channel, "Hi welcome back! :rainbow:")
+        
+  @client.event
+async def on_ready():
+    print("IM Here!")
+    await client.change_presence(game=discord.Game(name="$help for commands| bot by techtimefor| Im chilling"))
+   
 @bot.command()
 async def add(ctx, a: int, b: int):
     await ctx.send(V1+V2)
