@@ -32,11 +32,11 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name="$=ub!help for commands| bot by techtimefor| Im chilling"))
    
 @bot.command()
-async def add(ctx, a: int, b: int):
+async def add(ctx, x: int, y: int):
     await ctx.send(X+Y)
 
 @bot.command()
-async def multiply(ctx, a: int, b: int):
+async def multiply(ctx, x: int, y: int):
     await ctx.send(X*Y)
 
 @bot.command()
