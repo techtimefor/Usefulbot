@@ -33,11 +33,11 @@ async def on_ready():
    
 @bot.command()
 async def add(ctx, a: int, b: int):
-    await ctx.send(V1+V2)
+    await ctx.send(X+Y)
 
 @bot.command()
 async def multiply(ctx, a: int, b: int):
-    await ctx.send(V1*V2)
+    await ctx.send(X*Y)
 
 @bot.command()
 async def greet(ctx):
@@ -58,7 +58,7 @@ async def info(ctx):
     embed.add_field(name="How much people use me", value=f"{len(bot.guilds)}")
 
     # give users a link to invite thsi bot to their server
-    embed.add_field(name="Invite me to your server", value="[Invite link](<https://discordapp.com/api/oauth2/authorize?client_id=585810180072275976&permissions=8&scope=bot>)")
+    embed.add_field(name="Invite me to your server", value="[Invite link](<[removed for privacy]>)")
 
     await ctx.send(embed=embed)
 
@@ -68,8 +68,8 @@ bot.remove_command('help')
 async def help(ctx):
     embed = discord.Embed(title="Useful Bot", description="I do a lot techtimefor made me :joy: :", color=0xeee657)
 
-    embed.add_field(name="ub!add X Y", value="Gives the addition of **V1** and **V2**, inline=False)
-    embed.add_field(name="ub!multiply X Y", value="Gives the multiplication of **V1** and **V"**", inline=False)
+    embed.add_field(name="ub!add X Y", value="Gives the addition of **X** and **Y**, inline=False)
+    embed.add_field(name="ub!multiply X Y", value="Gives the multiplication of **X** and **Y"**", inline=False)
     embed.add_field(name="ub!greet", value="Gives a nice greet message", inline=False)
     embed.add_field(name="ub!gif", value="Get a good gif.", inline=False)
     embed.add_field(name="ub!info", value="Gives a little info about the bot", inline=False)
