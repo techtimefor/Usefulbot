@@ -2,8 +2,7 @@ import discord
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='ub!')
-with open("token.data") as tokenf:
-token = tokenf.readline()
+bot.run('TOKEN')
 
 @bot.event
 async def on_ready():
