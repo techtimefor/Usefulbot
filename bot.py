@@ -31,11 +31,11 @@ async def on_ready():
    
 @bot.command()
 async def add(ctx, x: int, y: int):
-    await ctx.send(X+Y)
+    await ctx.send(x+y)
 
 @bot.command()
 async def multiply(ctx, x: int, y: int):
-    await ctx.send(X*Y)
+    await ctx.send(x*y)
 
 @bot.command()
 async def greet(ctx):
