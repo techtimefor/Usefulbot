@@ -4,28 +4,19 @@ from discord.ext import commands
 bot = commands.Bot(command_prefix='ub!')
 bot.run('TOKEN')
 
-@bot.event
-async def on_ready():
-    print('Logged in as')
-    print(bot.user.name)
-    print(bot.user.id)
-    print('------')
 
  @client.event
 async def on_message(message):
     if message.author == client.user:
         return
-    if message.content == "Im feeling bad today":
-        await client.send_message(message.channel, "Dont worry cheer up! :rainbow:") 
-        
- @client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-    if message.content == "Hello":
-        await client.send_message(message.channel, "Hi welcome back! :rainbow:")
-        
-  @client.event
+    elif message.content == "Im feeling bad today":
+        await message.channel.send("Dont worry cheer up! :rainbow:") 
+    elif message.content == "Hello":
+        await message.channel.send("Hi welcome back! :rainbow:")
+     
+    await bot.process_commands(message)
+
+@bot.event()
 async def on_ready():
     print("IM Here!")
     await client.change_presence(game=discord.Game(name="$=ub!help for commands| bot by techtimefor| Im chilling"))
