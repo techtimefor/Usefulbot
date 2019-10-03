@@ -67,12 +67,12 @@ bot.remove_command('help')
 async def help(ctx):
     embed = discord.Embed(title="Useful Bot", description="I do a lot techtimefor made me :joy: :", color=0xeee657)
 
-    embed.add_field(name="ub!add X Y", value="Gives the addition of **X** and **Y**, inline=False)
-    embed.add_field(name="ub!multiply X Y", value="Gives the multiplication of **X** and **Y"**", inline=False)
-    embed.add_field(name="ub!greet", value="Gives a nice greet message", inline=False)
-    embed.add_field(name="ub!gif", value="Get a good gif.", inline=False)
-    embed.add_field(name="ub!info", value="Gives a little info about the bot", inline=False)
-    embed.add_field(name="ub!help", value="Gives this message", inline=False)
+    embed.add_field(name=f"{ctx.prefix}add X Y", value="Gives the addition of **X** and **Y**, inline=False)
+    embed.add_field(name=f"{ctx.prefix}multiply X Y", value="Gives the multiplication of **X** and **Y"**", inline=False)
+    embed.add_field(name=f"{ctx.prefix}greet", value="Gives a nice greet message", inline=False)
+    embed.add_field(name=f"{ctx.prefix}gif", value="Get a good gif.", inline=False)
+    embed.add_field(name=f"{ctx.prefix}info", value="Gives a little info about the bot", inline=False)
+    embed.add_field(name=f"{ctx.prefix}help", value="Gives this message", inline=False)
 
     await ctx.send(embed=embed)
 
